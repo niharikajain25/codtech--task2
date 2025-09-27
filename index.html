@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #4a90e2, #6dd5ed);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #357ABD;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      transition: background 0.3s ease;
+    }
+    nav a:hover {
+      background: #285f8f;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background: #ffffff;
+    }
+    .hero img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 15px;
+      margin: 20px;
+    }
+    .hero-text {
+      max-width: 500px;
+      margin: 20px;
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #4a90e2;
+    }
+    .hero-text p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+    .hero-text button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero-text button:hover {
+      background: #357ABD;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #4a90e2;
+      color: white;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 992px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      .container {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Awesome Responsive Page</h1>
+    <p>Looks great on mobile, tablet & desktop</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <section class="hero">
+    <img src="https://source.unsplash.com/400x300/?technology" alt="Tech Image">
+    <div class="hero-text">
+      <h2>Modern Web Design</h2>
+      <p>We create responsive, beautiful websites that adapt to any device. Resize this window to see it in action!</p>
+      <button onclick="alert('Thanks for clicking!')">Learn More</button>
+    </div>
+  </section>
+  <section class="container">
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?coding" alt="Coding">
+      <h3>Web Development</h3>
+      <p>Clean, responsive websites built with modern technologies.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?design" alt="Design">
+      <h3>UI/UX Design</h3>
+      <p>Beautiful interfaces that put user experience first.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?mobile" alt="Mobile">
+      <h3>Mobile Friendly</h3>
+      <p>Your website will work perfectly on any device size.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?seo" alt="SEO">
+      <h3>SEO Optimization</h3>
+      <p>Optimized to rank higher on search engines.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?cloud" alt="Cloud">
+      <h3>Cloud Integration</h3>
+      <p>Seamlessly connect your website to cloud services.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/300x200/?analytics" alt="Analytics">
+      <h3>Analytics</h3>
+      <p>Track and analyze visitors to improve engagement.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 My Awesome Responsive Page | Designed with ❤️</p>
+  </footer>
+  <script>
+    window.addEventListener('resize', () => {
+      console.log(`Window width: ${window.innerWidth}px`);
+    });
+  </script>
+</body>
+</html>
